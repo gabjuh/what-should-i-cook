@@ -1,24 +1,57 @@
 body {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 #box {
     background-color: #abc;
-    padding: 2rem;
-    width: 70%;
-    height: 200px;
-    margin: 0 auto;
+}
+
+#slide-image-left {
+    max-width: 72px;
+    margin-top: 2.5rem;
+}
+
+#slide-image-right {
+    /* max-width: 220px; */
+    max-width: 63px;
 
 }
-#button {
-    font-family: inherit;
-    background-color: purple;
-    display: block;
-    color: white;
-    border: none;
-    padding: 1.7rem;
-    margin: 0 auto 3rem auto;
-    cursor: pointer;
+
+
+#slide-image-right,
+#slide-image-left {
+    filter: drop-shadow(4px 6px 3px #777);
+
+    /* position: absolute; */
+    /* bottom: 0; */
 }
-#answerField {
-    text-align: center;
+
+/* Breakpoints 975, 750, 576 */
+
+@media only screen and (max-width: 975px)  {
+    #slide-image-left {
+        max-width: 56px;
+    }
+
+    #slide-image-right {
+        max-width: 50px;
+    }
+}
+
+@media only screen and (max-width: 750px)  {
+    #slide-image-left {
+        max-width: 46px;
+    }
+
+    #slide-image-right {
+        max-width: 40px;
+    }
+}
+
+@media only screen and (max-width: 576px)  {
+    #imgL,
+    #imgR { 
+        display: none;
+    }
 }

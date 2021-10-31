@@ -24,6 +24,8 @@ const food = [
     'pizza',
     'lencsehurka',
     'lasagne',
+    'palanéca',
+    
 ]
 
 
