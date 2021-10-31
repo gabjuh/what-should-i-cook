@@ -48,7 +48,7 @@
             preparation.innerHTML = ''
         }
         
-        button.src = arrObj[nr].link
+        // button.src = arrObj[nr].link
     }
 
     $('#button').addEventListener('click', () => miLegyenAzEbed(foodObj)) 
@@ -57,4 +57,21 @@
 
     const showElement = el => $(el).style.display = 'block'
 
+    const readFromFile = file => {
+        fetch(file)
+            .then(response => response.text())
+            .then(text => {
+                insertTextInto(text, el)
+            })
+
+        // console.log(text)
+    }
+
+    const insertTextInto = (txt, el) => el.innerHTML = txt
+    
+    insertTextInto(readFromFile('counters/found.txt'), $('#savedDays span'))
+    insertTextInto(readFromFile('counters/tried.txt'), $('#allTrials span'))
+
+    // let a = readFromFile('counters/found.txt')
+    // console.log(typeof a)
 }
