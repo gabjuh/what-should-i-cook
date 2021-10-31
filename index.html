@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mi legyen az ebéd</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            #box {
+                background-color: #abc;
+                padding: 2rem;
+                width: 70%;
+                height: 200px;
+                margin: 0 auto;
+
+            }
+            #button {
+                font-family: inherit;
+                background-color: purple;
+                display: block;
+                color: white;
+                border: none;
+                padding: 1.7rem;
+                margin: 0 auto 3rem auto;
+				cursor: pointer;
+            }
+            #answerField {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <button id="button">Mi legyen ma az ebéd?</button>
+            <div id="answerField"></div>
+        </div>
+        <script type="text/javascript">
+            'use strict'
+			
+			//Helpers
+			
+			const $ = q => document.querySelector(q)
+			const $$ = q => Array.from(document.querySelectorAll(q))
+
+            {
+			/*
+                const levesek = [
+                    'borsóleves',
+                    'krumplileves',
+                    'bableves',
+                    'paradicsomleves',
+                    'zöldbableves',
+                    'frankfurti leves',
+                    'zöldségleves',
+                    'tökkrémleves',
+                ]
+
+                const fozelekek = [
+                    'borsófőzelék',
+                    'krumplifőzelék',
+                    'zöldbabfőzelék',
+                    'répafőzelék',
+                    'spenótfőzelék',
+                ]
+
+                const egytaletelek = [
+                    'paradicsomos káposzta',
+                    'káposztástészta',
+                    'pörkölt + feltét',
+                    'töltött paprika',
+                    'lecsó',
+                ]
+
+                const sultek = [
+                    'rakott krumpli',
+                    'sült zöldség',
+                    'pizza',
+                    'lencsehurka',
+                    'lasagne',
+                ]*/
+				
+				const kajak = [
+					'borsóleves',
+                    'krumplileves',
+                    'bableves',
+                    'paradicsomleves',
+                    'zöldbableves',
+                    'frankfurti leves',
+                    'zöldségleves',
+                    'tökkrémleves',
+					'borsófőzelék',
+                    'krumplifőzelék',
+                    'zöldbabfőzelék',
+                    'répafőzelék',
+                    'spenótfőzelék',
+					'paradicsomos káposzta',
+                    'káposztástészta',
+                    'pörkölt + feltét',
+                    'töltött paprika',
+                    'lecsó',
+					'rakott krumpli',
+                    'sült zöldség',
+                    'pizza',
+                    'lencsehurka',
+                    'lasagne',
+				]
+
+                const miLegyenAzEbed = arr => {
+                    let nr = Math.floor(Math.random() * (arr.length) + 0)
+                    $('#answerField').innerHTML = arr[nr]
+                }
+				
+				$('#button').addEventListener('click', () => miLegyenAzEbed(kajak)) 
+				
+            }
+        </script>
+    </body>
+</html>
